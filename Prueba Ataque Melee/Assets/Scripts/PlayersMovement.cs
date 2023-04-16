@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayersMovement : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D rb;
-    [SerializeField] private GameObject player1, player2, player3, player4;
+    [SerializeField] private GameObject[] players;
     [SerializeField] private float speed;
     
 
@@ -31,18 +31,18 @@ public class PlayersMovement : MonoBehaviour
         if (Input.GetAxisRaw("Horizontal") != 0)
         {
             //Se invocan las animaciones de los personajes
-            player1.GetComponent<Animator>().SetTrigger("run");
-            player2.GetComponent<Animator>().SetTrigger("run");
-            player3.GetComponent<Animator>().SetTrigger("run");
-            player4.GetComponent<Animator>().SetTrigger("run");
+            foreach(GameObject player in players)
+            {
+                player.GetComponent<Animator>().SetTrigger("run");
+            }
         }
         else if(Input.GetAxisRaw("Horizontal") == 0)
         {
             //Se invocan las animaciones de los personajes
-            player1.GetComponent<Animator>().SetTrigger("idle");
-            player2.GetComponent<Animator>().SetTrigger("idle");
-            player3.GetComponent<Animator>().SetTrigger("idle");
-            player4.GetComponent<Animator>().SetTrigger("idle");
+            foreach (GameObject player in players)
+            {
+                player.GetComponent<Animator>().SetTrigger("idle");
+            }
         }
     }
 
@@ -51,18 +51,18 @@ public class PlayersMovement : MonoBehaviour
         if (Input.GetAxisRaw("Horizontal") > 0)
         {
             //Se establece la rotación por defecto si se está moviendo hacia la derecha
-            player1.GetComponent<Transform>().localScale = new Vector3(1, 1, 1);
-            player2.GetComponent<Transform>().localScale = new Vector3(1, 1, 1);
-            player3.GetComponent<Transform>().localScale = new Vector3(1, 1, 1);
-            player4.GetComponent<Transform>().localScale = new Vector3(1, 1, 1);
+            foreach (GameObject player in players)
+            {
+                player.GetComponent<Transform>().localScale = new Vector3 (1, 1, 1);
+            }
         }
         else if (Input.GetAxisRaw("Horizontal") < 0)
         {
             //Se invierte la imagen sobre el eje x si se está moviendo hacia la izquierda
-            player1.GetComponent<Transform>().localScale = new Vector3(-1, 1, 1);
-            player2.GetComponent<Transform>().localScale = new Vector3(-1, 1, 1);
-            player3.GetComponent<Transform>().localScale = new Vector3(-1, 1, 1);
-            player4.GetComponent<Transform>().localScale = new Vector3(-1, 1, 1);
+            foreach (GameObject player in players)
+            {
+                player.GetComponent<Transform>().localScale = new Vector3(-1, 1, 1);
+            }
         }
     }
 }
