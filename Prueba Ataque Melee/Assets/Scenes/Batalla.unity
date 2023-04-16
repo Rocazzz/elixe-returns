@@ -130,6 +130,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4349707685712274708, guid: 5917b04b353d15d4b89c0a164bbbb54a, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4349707685838311204, guid: 5917b04b353d15d4b89c0a164bbbb54a, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4349707685849884572, guid: 5917b04b353d15d4b89c0a164bbbb54a, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 4349707686767469652, guid: 5917b04b353d15d4b89c0a164bbbb54a, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -221,6 +233,10 @@ PrefabInstance:
     - target: {fileID: 4349707686767469659, guid: 5917b04b353d15d4b89c0a164bbbb54a, type: 3}
       propertyPath: m_Name
       value: JUGADORES_Batalla Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4349707686815885419, guid: 5917b04b353d15d4b89c0a164bbbb54a, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5917b04b353d15d4b89c0a164bbbb54a, type: 3}
