@@ -2,6 +2,7 @@ using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayersMovement : MonoBehaviour
 {
@@ -63,6 +64,14 @@ public class PlayersMovement : MonoBehaviour
             {
                 player.GetComponent<Transform>().localScale = new Vector3(-1, 1, 1);
             }
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.CompareTag("Enemigo"))
+        {
+            SceneManager.LoadScene("Batalla");
         }
     }
 }
