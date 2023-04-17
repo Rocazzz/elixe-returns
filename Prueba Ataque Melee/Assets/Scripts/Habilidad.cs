@@ -1,18 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Build.Content;
 using UnityEngine;
 
 public class Habilidad : MonoBehaviour
 {
-    [SerializeField] private float fuerza;
+    [SerializeField] private Personaje personaje;
     [SerializeField] private int indexDado1, indexDado2;
     [SerializeField] private Transform projectileSpawner;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private List<Personaje> habilityTarget;
 
     // Update is called once per frame
     void Update()
@@ -20,8 +16,9 @@ public class Habilidad : MonoBehaviour
         
     }
 
-    public float calculateDamage()
+    public float CalculateDamage()
     {
+        float fuerza = personaje.fuerza;
         int dadoInicial = Random.Range(0, 10);
         float damage = 0;
 
@@ -65,6 +62,15 @@ public class Habilidad : MonoBehaviour
             Debug.Log("Critico");
         }
         return damage;
+    }
+
+    public void Atacar()
+    {
+        habilityTarget = personaje.rivales;
+        foreach (Personaje p in habilityTarget)
+        {
+            p.TakeDamage(CalculateDamage());
+        }
     }
 
 

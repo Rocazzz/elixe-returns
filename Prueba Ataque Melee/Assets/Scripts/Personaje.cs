@@ -7,10 +7,13 @@ public class Personaje : MonoBehaviour
 {
     public string nombre;
     public Habilidad[] listaHabilidades;
-    public float vida;
+    public float vida, fuerza;
     public string armadura;
     public float indexResistencia;
 
+    public List<Personaje> rivales;
+
+    public Animator animator;
 
     public void LanzarHabilidad(int index)
     {
@@ -38,5 +41,10 @@ public class Personaje : MonoBehaviour
                 vida = vida - Random.Range(0, indexResistencia) - Random.Range(0, 4);
             }
         }
+    }
+
+    public void CambiarAnimacion(string trigger)
+    {
+        animator.SetTrigger(trigger);
     }
 }
