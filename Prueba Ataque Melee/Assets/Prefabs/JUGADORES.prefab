@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7190321824623782511}
   m_Layer: 5
   m_Name: JUGDR4
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -152,7 +152,7 @@ GameObject:
   - component: {fileID: 7190321824625050327}
   m_Layer: 5
   m_Name: JUGDR3
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -290,7 +290,7 @@ GameObject:
   - component: {fileID: 7190321825019373799}
   m_Layer: 5
   m_Name: JUGDR2
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -425,9 +425,10 @@ GameObject:
   - component: {fileID: 7190321826078239141}
   - component: {fileID: 7190321826078239140}
   - component: {fileID: 7190321826078239143}
+  - component: {fileID: 1052009158}
   m_Layer: 5
   m_Name: JUGADORES
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -496,6 +497,33 @@ MonoBehaviour:
   - {fileID: 7190321824625050325}
   - {fileID: 7190321824623782509}
   speed: 1.5
+  startingPosition: {fileID: 11400000, guid: aa08e6e9f87901d44bda0410c9f8fb72, type: 2}
+--- !u!61 &1052009158
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7190321826078239146}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.15974677, y: -0.059939295}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.66221756, y: 0.23656207}
+  m_EdgeRadius: 0
 --- !u!1 &7190321826207917466
 GameObject:
   m_ObjectHideFlags: 0
@@ -510,7 +538,7 @@ GameObject:
   - component: {fileID: 7190321826207917460}
   m_Layer: 5
   m_Name: JUGDR1
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

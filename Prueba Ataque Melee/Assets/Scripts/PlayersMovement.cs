@@ -10,13 +10,16 @@ public class PlayersMovement : MonoBehaviour
     [SerializeField] private GameObject[] players;
     [SerializeField] private float speed;
     
-
+    //Cree un Vector Value para guardan la posicion de personajes luego de transicionar
+    [SerializeField] private VectorValue startingPosition;
     // Start is called before the first frame update
     void Start()
     {
         rb.velocity = Vector3.zero;
+        transform.position = startingPosition.initialValue;
     }
 
+    
     // Update is called once per frame
     void Update()
     {
@@ -26,7 +29,7 @@ public class PlayersMovement : MonoBehaviour
 
     public void moverse()
     {
-        //Se añade velocidad según la dirección que se presione
+        //Se aï¿½ade velocidad segï¿½n la direcciï¿½n que se presione
         rb.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * speed, 0);
 
         if (Input.GetAxisRaw("Horizontal") != 0)
@@ -51,7 +54,7 @@ public class PlayersMovement : MonoBehaviour
     {
         if (Input.GetAxisRaw("Horizontal") > 0)
         {
-            //Se establece la rotación por defecto si se está moviendo hacia la derecha
+            //Se establece la rotaciï¿½n por defecto si se estï¿½ moviendo hacia la derecha
             foreach (GameObject player in players)
             {
                 player.GetComponent<Transform>().localScale = new Vector3 (1, 1, 1);
@@ -59,7 +62,7 @@ public class PlayersMovement : MonoBehaviour
         }
         else if (Input.GetAxisRaw("Horizontal") < 0)
         {
-            //Se invierte la imagen sobre el eje x si se está moviendo hacia la izquierda
+            //Se invierte la imagen sobre el eje x si se estï¿½ moviendo hacia la izquierda
             foreach (GameObject player in players)
             {
                 player.GetComponent<Transform>().localScale = new Vector3(-1, 1, 1);

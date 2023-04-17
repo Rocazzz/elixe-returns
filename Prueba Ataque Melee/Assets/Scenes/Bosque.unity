@@ -304,11 +304,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7190321826078239141, guid: 93bf1adba437e8945a9de5f4dc40dbf8, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -5.54
+      value: -7.28
       objectReference: {fileID: 0}
     - target: {fileID: 7190321826078239141, guid: 93bf1adba437e8945a9de5f4dc40dbf8, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -1.75
+      value: -1.96
       objectReference: {fileID: 0}
     - target: {fileID: 7190321826078239141, guid: 93bf1adba437e8945a9de5f4dc40dbf8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2110,6 +2110,18 @@ PrefabInstance:
     - target: {fileID: 383449772176928792, guid: 6a6e3508d97e47746a1777ae42423c01, type: 3}
       propertyPath: scene
       value: Pueblo
+      objectReference: {fileID: 0}
+    - target: {fileID: 383449772176928792, guid: 6a6e3508d97e47746a1777ae42423c01, type: 3}
+      propertyPath: playerStorage
+      value: 
+      objectReference: {fileID: 11400000, guid: aa08e6e9f87901d44bda0410c9f8fb72, type: 2}
+    - target: {fileID: 383449772176928792, guid: 6a6e3508d97e47746a1777ae42423c01, type: 3}
+      propertyPath: playerPosition.x
+      value: 5.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 383449772176928792, guid: 6a6e3508d97e47746a1777ae42423c01, type: 3}
+      propertyPath: playerPosition.y
+      value: -0.678
       objectReference: {fileID: 0}
     - target: {fileID: 383449772176928793, guid: 6a6e3508d97e47746a1777ae42423c01, type: 3}
       propertyPath: m_IsTrigger
