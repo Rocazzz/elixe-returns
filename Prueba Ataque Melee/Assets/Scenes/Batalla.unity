@@ -332,7 +332,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\xBFQu\xE9 deber\xEDa hacer "
+  m_Text: "\xBFQu\xE9 deber\xEDa hacer jupapa?"
 --- !u!222 &398072797
 CanvasRenderer:
   m_ObjectHideFlags: 0
