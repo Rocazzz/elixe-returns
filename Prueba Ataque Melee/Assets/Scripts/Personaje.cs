@@ -14,7 +14,7 @@ public class Personaje : MonoBehaviour
 
     public void LanzarHabilidad(int index)
     {
-        listaHabilidades[index].Atacar();
+        //listaHabilidades[index].Atacar();
     }
 
     public void TakeDamage(float cant)
