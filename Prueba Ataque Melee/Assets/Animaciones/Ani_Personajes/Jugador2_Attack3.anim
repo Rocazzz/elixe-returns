@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Jugador1_Attack1
+  m_Name: Jugador2_Attack3
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,15 +20,21 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: -5386529939198198453, guid: 58c32fa8a337f9d4d9742483ed7347e8, type: 3}
-    - time: 0.15
-      value: {fileID: 1273228121180341589, guid: 58c32fa8a337f9d4d9742483ed7347e8, type: 3}
-    - time: 0.28333333
-      value: {fileID: 9142745663229125269, guid: 58c32fa8a337f9d4d9742483ed7347e8, type: 3}
-    - time: 0.43333334
-      value: {fileID: -3607894272285253048, guid: 58c32fa8a337f9d4d9742483ed7347e8, type: 3}
+      value: {fileID: 21300000, guid: fb12b9d34f13f4e4091223af1d5de063, type: 3}
+    - time: 0.083333336
+      value: {fileID: 21300000, guid: 837415f10fef88e41834121dab19bba7, type: 3}
+    - time: 0.16666667
+      value: {fileID: 21300000, guid: 07216524743197f41921f42ecd3a6b04, type: 3}
+    - time: 0.25
+      value: {fileID: 21300000, guid: 4bb7aacc1f162ec418bb3946459f2632, type: 3}
+    - time: 0.33333334
+      value: {fileID: 21300000, guid: d1526fd695ed57846b6038890a398094, type: 3}
+    - time: 0.41666666
+      value: {fileID: 21300000, guid: 73567cdfa2ace244a9fb8f777d0d40cd, type: 3}
+    - time: 0.5
+      value: {fileID: 21300000, guid: f29887c93c039b94e8611c7960ccd57c, type: 3}
     - time: 0.5833333
-      value: {fileID: 4831023161945834769, guid: 58c32fa8a337f9d4d9742483ed7347e8, type: 3}
+      value: {fileID: 21300000, guid: cb0b1ad892ce23447b58d68735d1dc79, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -48,11 +54,14 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: -5386529939198198453, guid: 58c32fa8a337f9d4d9742483ed7347e8, type: 3}
-    - {fileID: 1273228121180341589, guid: 58c32fa8a337f9d4d9742483ed7347e8, type: 3}
-    - {fileID: 9142745663229125269, guid: 58c32fa8a337f9d4d9742483ed7347e8, type: 3}
-    - {fileID: -3607894272285253048, guid: 58c32fa8a337f9d4d9742483ed7347e8, type: 3}
-    - {fileID: 4831023161945834769, guid: 58c32fa8a337f9d4d9742483ed7347e8, type: 3}
+    - {fileID: 21300000, guid: fb12b9d34f13f4e4091223af1d5de063, type: 3}
+    - {fileID: 21300000, guid: 837415f10fef88e41834121dab19bba7, type: 3}
+    - {fileID: 21300000, guid: 07216524743197f41921f42ecd3a6b04, type: 3}
+    - {fileID: 21300000, guid: 4bb7aacc1f162ec418bb3946459f2632, type: 3}
+    - {fileID: 21300000, guid: d1526fd695ed57846b6038890a398094, type: 3}
+    - {fileID: 21300000, guid: 73567cdfa2ace244a9fb8f777d0d40cd, type: 3}
+    - {fileID: 21300000, guid: f29887c93c039b94e8611c7960ccd57c, type: 3}
+    - {fileID: 21300000, guid: cb0b1ad892ce23447b58d68735d1dc79, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
@@ -78,10 +87,10 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0.3
+  - time: 0.16666667
     functionName: LanzarHabilidad
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
-    intParameter: 0
+    intParameter: 2
     messageOptions: 0

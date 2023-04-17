@@ -33,6 +33,11 @@ public class BattleManager : MonoBehaviour
         if (player.listaHabilidades.Length == 1)
         {
             mensaje1.SetActive(true);
+            foreach (Boton boton in mensaje1.GetComponentsInChildren<Boton>())
+            {
+                boton.personaje = player;
+            }
+
             mensaje2.SetActive(false);
             mensaje3.SetActive(false);
         }
@@ -41,6 +46,10 @@ public class BattleManager : MonoBehaviour
         {
             mensaje1.SetActive(false);
             mensaje2.SetActive(true);
+            foreach (Boton boton in mensaje2.GetComponentsInChildren<Boton>())
+            {
+                boton.personaje = player;
+            }
             mensaje3.SetActive(false);
         }
 
@@ -49,6 +58,11 @@ public class BattleManager : MonoBehaviour
             mensaje1.SetActive(false);
             mensaje2.SetActive(false);
             mensaje3.SetActive(true);
+            foreach (Boton boton in mensaje3.GetComponentsInChildren<Boton>())
+            {
+                boton.personaje = player;
+            }
+            mensaje3.GetComponentInChildren<Boton>().personaje = player;
         }
     }
 

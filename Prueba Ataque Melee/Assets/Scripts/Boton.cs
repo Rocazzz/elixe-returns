@@ -7,6 +7,7 @@ public class Boton : MonoBehaviour
 {
     public Personaje personaje;
     public int index;
+    private string trigger = "attack";
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +23,8 @@ public class Boton : MonoBehaviour
 
     public void RealizarAtaque()
     {
-        personaje.LanzarHabilidad(index);
+        
+        personaje.CambiarAnimacion(trigger+(index+1));
+        
     }
 }
