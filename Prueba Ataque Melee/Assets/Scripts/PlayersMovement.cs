@@ -10,6 +10,7 @@ public class PlayersMovement : MonoBehaviour
     [SerializeField] private GameObject[] players;
     [SerializeField] private float speed;
     [SerializeField] private int cantidadPociones;
+    [SerializeField] private bool isOnBattle;
     
     //Cree un Vector Value para guardan la posicion de personajes luego de transicionar
     [SerializeField] private VectorValue startingPosition;
@@ -25,8 +26,16 @@ public class PlayersMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        moverse();
-        rotar();
+        if(!isOnBattle)
+        {
+            moverse();
+            rotar();
+        }
+        else if(isOnBattle)
+        {
+            transform.position = new Vector3(-5.5f, -1.8f, 0);
+        }
+        
     }
 
     public void moverse()
