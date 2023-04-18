@@ -407,6 +407,7 @@ CanvasRenderer:
   m_GameObject: {fileID: 431242094}
   m_CullTransparentMesh: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &456797127
 GameObject:
   m_ObjectHideFlags: 0
@@ -536,6 +537,8 @@ Transform:
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 =======
+=======
+>>>>>>> f3f1686375b2b734faca4a9cae8c179de7db693d
 --- !u!114 &522946209 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5361072701502105293, guid: 5917b04b353d15d4b89c0a164bbbb54a, type: 3}
@@ -547,6 +550,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37c244f3adaaeb04188d9e9607be24ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
+>>>>>>> f3f1686375b2b734faca4a9cae8c179de7db693d
+=======
 >>>>>>> f3f1686375b2b734faca4a9cae8c179de7db693d
 --- !u!1001 &622344047
 PrefabInstance:
