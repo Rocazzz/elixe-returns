@@ -326,6 +326,10 @@ PrefabInstance:
       propertyPath: speed
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 7190321826078239143, guid: 93bf1adba437e8945a9de5f4dc40dbf8, type: 3}
+      propertyPath: startingPosition
+      value: 
+      objectReference: {fileID: 11400000, guid: 1439dfd6e2ec8bb42be51095dfdcd555, type: 2}
     - target: {fileID: 7190321826078239146, guid: 93bf1adba437e8945a9de5f4dc40dbf8, type: 3}
       propertyPath: m_Name
       value: JUGADORES
@@ -540,7 +544,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: Pueblo
-  playerPosition: {x: -7.28, y: -1.96}
+  playerPosition: {x: 5.09, y: -0.678}
   playerStorage: {fileID: 11400000, guid: aa08e6e9f87901d44bda0410c9f8fb72, type: 2}
 --- !u!212 &121254523
 SpriteRenderer:
