@@ -13,6 +13,7 @@ public class Habilidad : MonoBehaviour
     private void Awake()
     {
         battleManager = FindAnyObjectByType<BattleManager>();
+        habilityTarget = personaje.rivales;
     }
     // Update is called once per frame
     void Update()
@@ -72,10 +73,10 @@ public class Habilidad : MonoBehaviour
 
     public void Atacar()
     {
-        habilityTarget = personaje.rivales;
+        float damage = CalculateDamage();
         foreach (Personaje p in habilityTarget)
         {
-            p.TakeDamage(CalculateDamage());
+            p.TakeDamage(damage);
             battleManager.turno++;
         }
     }

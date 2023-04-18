@@ -133,7 +133,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7190321826078239146, guid: 93bf1adba437e8945a9de5f4dc40dbf8, type: 3}
       propertyPath: m_Name
-      value: JUGADORES_Batalla
+      value: JUGADORES_Batalla Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7190321826207917461, guid: 93bf1adba437e8945a9de5f4dc40dbf8, type: 3}
       propertyPath: m_AnchoredPosition.x

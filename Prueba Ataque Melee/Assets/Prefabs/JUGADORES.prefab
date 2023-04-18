@@ -53,6 +53,7 @@ MonoBehaviour:
   indexDado1: 10
   indexDado2: 6
   habilityTarget: []
+  battleManager: {fileID: 0}
 --- !u!1 &1407325774718588375
 GameObject:
   m_ObjectHideFlags: 0
@@ -106,6 +107,7 @@ MonoBehaviour:
   indexDado1: 10
   indexDado2: 6
   habilityTarget: []
+  battleManager: {fileID: 0}
 --- !u!1 &2753899953340247138
 GameObject:
   m_ObjectHideFlags: 0
@@ -310,6 +312,7 @@ MonoBehaviour:
   indexDado1: 6
   indexDado2: 6
   habilityTarget: []
+  battleManager: {fileID: 0}
 --- !u!1 &4512474448335256242
 GameObject:
   m_ObjectHideFlags: 0
@@ -363,6 +366,7 @@ MonoBehaviour:
   indexDado1: 6
   indexDado2: 6
   habilityTarget: []
+  battleManager: {fileID: 0}
 --- !u!1 &5425916700401138970
 GameObject:
   m_ObjectHideFlags: 0
@@ -416,6 +420,7 @@ MonoBehaviour:
   indexDado1: 10
   indexDado2: 0
   habilityTarget: []
+  battleManager: {fileID: 0}
 --- !u!1 &7041228971193497326
 GameObject:
   m_ObjectHideFlags: 0
@@ -469,6 +474,7 @@ MonoBehaviour:
   indexDado1: 10
   indexDado2: 4
   habilityTarget: []
+  battleManager: {fileID: 0}
 --- !u!1 &7190321824623782509
 GameObject:
   m_ObjectHideFlags: 0
@@ -621,7 +627,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02537aec73e2a4d4482c492a7b33035a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  battleManager: {fileID: 0}
   nombre: Rose
   listaHabilidades:
   - {fileID: 7753111297847955948}
@@ -629,6 +634,7 @@ MonoBehaviour:
   fuerza: 16
   armadura: Peto de cuero
   indexResistencia: 0
+  BarraDeVida: {fileID: 0}
   rivales: []
   animator: {fileID: 0}
 --- !u!1 &7190321824625050325
@@ -783,7 +789,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02537aec73e2a4d4482c492a7b33035a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  battleManager: {fileID: 0}
   nombre: Conrad
   listaHabilidades:
   - {fileID: 1574595355282871154}
@@ -791,6 +796,7 @@ MonoBehaviour:
   fuerza: 19
   armadura: Armadura Colosal de Guerra
   indexResistencia: 6
+  BarraDeVida: {fileID: 0}
   rivales: []
   animator: {fileID: 0}
 --- !u!1 &7190321825019373797
@@ -945,7 +951,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02537aec73e2a4d4482c492a7b33035a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  battleManager: {fileID: 0}
   nombre: Caspian
   listaHabilidades:
   - {fileID: 0}
@@ -955,6 +960,7 @@ MonoBehaviour:
   fuerza: 23
   armadura: Armadura de combate
   indexResistencia: 4
+  BarraDeVida: {fileID: 0}
   rivales: []
   animator: {fileID: 0}
 --- !u!1 &7190321826078239146
@@ -1221,7 +1227,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02537aec73e2a4d4482c492a7b33035a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  battleManager: {fileID: 0}
   nombre: Dominic
   listaHabilidades:
   - {fileID: 1807113024892122180}
@@ -1230,6 +1235,7 @@ MonoBehaviour:
   fuerza: 17
   armadura: Peto de cuero con refuerzos
   indexResistencia: 0
+  BarraDeVida: {fileID: 0}
   rivales: []
   animator: {fileID: 0}
 --- !u!1 &8238089987801983992
@@ -1285,3 +1291,4 @@ MonoBehaviour:
   indexDado1: 10
   indexDado2: 4
   habilityTarget: []
+  battleManager: {fileID: 0}
