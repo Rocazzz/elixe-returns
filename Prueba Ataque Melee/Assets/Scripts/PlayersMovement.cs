@@ -9,6 +9,7 @@ public class PlayersMovement : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private GameObject[] players;
     [SerializeField] private float speed;
+    [SerializeField] private int cantidadPociones;
     
     //Cree un Vector Value para guardan la posicion de personajes luego de transicionar
     [SerializeField] private VectorValue startingPosition;
@@ -17,6 +18,7 @@ public class PlayersMovement : MonoBehaviour
     {
         rb.velocity = Vector3.zero;
         transform.position = startingPosition.initialValue;
+        
     }
 
     

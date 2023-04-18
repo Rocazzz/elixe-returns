@@ -7,14 +7,22 @@ public class Personaje : MonoBehaviour
 {
     public string nombre;
     public Habilidad[] listaHabilidades;
-    public float vida;
+    public float vida, fuerza;
     public string armadura;
     public float indexResistencia;
 
+    public List<Personaje> rivales;
+
+    public Animator animator;
+
+    private void Awake()
+    {
+        animator = gameObject.GetComponent<Animator>();
+    }
 
     public void LanzarHabilidad(int index)
     {
-        //listaHabilidades[index].Atacar();
+        listaHabilidades[index].Atacar();
     }
 
     public void TakeDamage(float cant)
@@ -30,13 +38,18 @@ public class Personaje : MonoBehaviour
 
             else if (dado > 3 && dado < 7)
             {
-                vida -= Random.Range(0, indexResistencia);
+                vida = vida - (cant - Random.Range(0, indexResistencia));
             }
 
             else if (dado >= 0 && dado <= 3)
             {
-                vida = vida - Random.Range(0, indexResistencia) - Random.Range(0, 4);
+                vida = vida - (cant - Random.Range(0, indexResistencia) - Random.Range(0, 4));
             }
         }
+    }
+
+    public void CambiarAnimacion(string trigger)
+    {
+        animator.SetTrigger(trigger);
     }
 }

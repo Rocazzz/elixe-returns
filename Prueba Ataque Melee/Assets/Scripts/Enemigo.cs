@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Enemigo : MonoBehaviour
+public class Enemigo : Personaje
 {
     // Start is called before the first frame update
     void Start()
     {
-        
+        foreach (Heroe hero in FindFirstObjectByType<PlayersMovement>().GetComponentsInChildren<Heroe>())
+        {
+            rivales.Add(hero);
+        }
     }
 
     // Update is called once per frame
