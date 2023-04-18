@@ -26,26 +26,27 @@ public class BattleManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ( CheckHeroesConVida() && CheckEnemigosConVida() )
+        if (CheckHeroesConVida() && CheckEnemigosConVida())
         {
-            if(turno < listaHeroesEnBatalla.Count)
+            if (turno < listaHeroesEnBatalla.Count)
             {
                 TurnoDeAtaque(listaHeroesEnBatalla[turno]);
             }
-            else if(turno >= listaHeroesEnBatalla.Count)
+            else if (turno >= listaHeroesEnBatalla.Count && turno < (listaEnemigosEnBatalla.Count + listaHeroesEnBatalla.Count))
             {
-                TurnoDeAtaque(listaEnemigosEnBatalla[turno-listaHeroesEnBatalla.Count] );
+                TurnoDeAtaque(listaEnemigosEnBatalla[turno - listaHeroesEnBatalla.Count]);
             }
-            else if (turno-listaHeroesEnBatalla.Count >= listaEnemigosEnBatalla.Count)
+            else if (turno >= listaEnemigosEnBatalla.Count)
             {
                 turno = 0;
             }
         }
     }
 
+
     public void TurnoDeAtaque(Personaje player)
     {
-        if(player is Heroe)
+        if(player.GetType() == typeof(Heroe))
         {
             if (player.listaHabilidades.Length == 1)
             {
@@ -82,9 +83,10 @@ public class BattleManager : MonoBehaviour
                 mensaje3.GetComponentInChildren<Boton>().personaje = player;
             }
         }
-        else if (player is Enemigo)
+        else if (player.GetType() == typeof(Enemigo))
         {
-            //player.CambiarAnimacion();
+            player.LanzarHabilidad(0);
+            Debug.Log("Holis");
         }
     }
 
