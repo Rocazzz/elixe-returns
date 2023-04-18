@@ -1111,67 +1111,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   personaje: {fileID: 0}
   index: 0
---- !u!1001 &869858473
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3512949074409452160, guid: b740c41b3237395459a425cbd9be9e2f, type: 3}
-      propertyPath: m_Name
-      value: Enemigo1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3512949074409452163, guid: b740c41b3237395459a425cbd9be9e2f, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3512949074409452163, guid: b740c41b3237395459a425cbd9be9e2f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 3.386373
-      objectReference: {fileID: 0}
-    - target: {fileID: 3512949074409452163, guid: b740c41b3237395459a425cbd9be9e2f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.4105182
-      objectReference: {fileID: 0}
-    - target: {fileID: 3512949074409452163, guid: b740c41b3237395459a425cbd9be9e2f, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3512949074409452163, guid: b740c41b3237395459a425cbd9be9e2f, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3512949074409452163, guid: b740c41b3237395459a425cbd9be9e2f, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3512949074409452163, guid: b740c41b3237395459a425cbd9be9e2f, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3512949074409452163, guid: b740c41b3237395459a425cbd9be9e2f, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3512949074409452163, guid: b740c41b3237395459a425cbd9be9e2f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3512949074409452163, guid: b740c41b3237395459a425cbd9be9e2f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3512949074409452163, guid: b740c41b3237395459a425cbd9be9e2f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5858417826441559558, guid: b740c41b3237395459a425cbd9be9e2f, type: 3}
-      propertyPath: nombre
-      value: Thing
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b740c41b3237395459a425cbd9be9e2f, type: 3}
 --- !u!114 &875931125 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8709698493911072171, guid: 5917b04b353d15d4b89c0a164bbbb54a, type: 3}
@@ -1584,6 +1523,7 @@ GameObject:
   - component: {fileID: 1031332920}
   - component: {fileID: 1031332919}
   - component: {fileID: 1031332918}
+  - component: {fileID: 1031332921}
   m_Layer: 5
   m_Name: "Poci\xF3n"
   m_TagString: Untagged
@@ -1655,7 +1595,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1031332919}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1031332921}
+        m_TargetAssemblyTypeName: Boton, Assembly-CSharp
+        m_MethodName: UtilizarPocion
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1031332919
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1694,6 +1646,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1031332916}
   m_CullTransparentMesh: 1
+--- !u!114 &1031332921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031332916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c85fa4c7d4759dd4ba238cf622ac442f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  personaje: {fileID: 0}
+  index: 0
 --- !u!1 &1033361663
 GameObject:
   m_ObjectHideFlags: 0
@@ -2617,6 +2583,7 @@ GameObject:
   - component: {fileID: 1553865263}
   - component: {fileID: 1553865262}
   - component: {fileID: 1553865261}
+  - component: {fileID: 1553865264}
   m_Layer: 5
   m_Name: "Poci\xF3n"
   m_TagString: Untagged
@@ -2688,7 +2655,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1553865262}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1553865264}
+        m_TargetAssemblyTypeName: Boton, Assembly-CSharp
+        m_MethodName: UtilizarPocion
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1553865262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2727,6 +2706,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1553865259}
   m_CullTransparentMesh: 1
+--- !u!114 &1553865264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1553865259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c85fa4c7d4759dd4ba238cf622ac442f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  personaje: {fileID: 0}
+  index: 0
 --- !u!1 &1568059202
 GameObject:
   m_ObjectHideFlags: 0
@@ -2823,6 +2816,7 @@ GameObject:
   - component: {fileID: 1572100780}
   - component: {fileID: 1572100779}
   - component: {fileID: 1572100778}
+  - component: {fileID: 1572100781}
   m_Layer: 5
   m_Name: "Poci\xF3n"
   m_TagString: Untagged
@@ -2894,7 +2888,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1572100779}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1572100781}
+        m_TargetAssemblyTypeName: Boton, Assembly-CSharp
+        m_MethodName: UtilizarPocion
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1572100779
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2933,6 +2939,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1572100776}
   m_CullTransparentMesh: 1
+--- !u!114 &1572100781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1572100776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c85fa4c7d4759dd4ba238cf622ac442f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  personaje: {fileID: 0}
+  index: 0
 --- !u!1 &1607299431
 GameObject:
   m_ObjectHideFlags: 0
@@ -3422,6 +3442,63 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2033904311
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3512949074409452160, guid: b740c41b3237395459a425cbd9be9e2f, type: 3}
+      propertyPath: m_Name
+      value: Enemigo1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3512949074409452163, guid: b740c41b3237395459a425cbd9be9e2f, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3512949074409452163, guid: b740c41b3237395459a425cbd9be9e2f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3512949074409452163, guid: b740c41b3237395459a425cbd9be9e2f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3512949074409452163, guid: b740c41b3237395459a425cbd9be9e2f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3512949074409452163, guid: b740c41b3237395459a425cbd9be9e2f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3512949074409452163, guid: b740c41b3237395459a425cbd9be9e2f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3512949074409452163, guid: b740c41b3237395459a425cbd9be9e2f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3512949074409452163, guid: b740c41b3237395459a425cbd9be9e2f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3512949074409452163, guid: b740c41b3237395459a425cbd9be9e2f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3512949074409452163, guid: b740c41b3237395459a425cbd9be9e2f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3512949074409452163, guid: b740c41b3237395459a425cbd9be9e2f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b740c41b3237395459a425cbd9be9e2f, type: 3}
 --- !u!1 &2046043885
 GameObject:
   m_ObjectHideFlags: 0
