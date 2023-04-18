@@ -52,7 +52,6 @@ MonoBehaviour:
   personaje: {fileID: 2436655448927301049}
   indexDado1: 10
   indexDado2: 6
-  projectileSpawner: {fileID: 0}
   habilityTarget: []
 --- !u!1 &1407325774718588375
 GameObject:
@@ -106,7 +105,6 @@ MonoBehaviour:
   personaje: {fileID: 2436655448927301049}
   indexDado1: 10
   indexDado2: 6
-  projectileSpawner: {fileID: 0}
   habilityTarget: []
 --- !u!1 &2753899953340247138
 GameObject:
@@ -181,42 +179,6 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &3071860874935168736
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4469851582165600740}
-  m_Layer: 5
-  m_Name: ProjectileSpawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &4469851582165600740
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3071860874935168736}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 7190321826207917461}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.116, y: 0.019}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &3608508524042504157
@@ -347,7 +309,6 @@ MonoBehaviour:
   personaje: {fileID: 1957429948064191873}
   indexDado1: 6
   indexDado2: 6
-  projectileSpawner: {fileID: 4469851582165600740}
   habilityTarget: []
 --- !u!1 &4512474448335256242
 GameObject:
@@ -401,7 +362,6 @@ MonoBehaviour:
   personaje: {fileID: 0}
   indexDado1: 6
   indexDado2: 6
-  projectileSpawner: {fileID: 4469851582165600740}
   habilityTarget: []
 --- !u!1 &5425916700401138970
 GameObject:
@@ -455,7 +415,6 @@ MonoBehaviour:
   personaje: {fileID: 8611726785669174824}
   indexDado1: 10
   indexDado2: 0
-  projectileSpawner: {fileID: 0}
   habilityTarget: []
 --- !u!1 &7041228971193497326
 GameObject:
@@ -509,7 +468,6 @@ MonoBehaviour:
   personaje: {fileID: 1957429948064191873}
   indexDado1: 10
   indexDado2: 4
-  projectileSpawner: {fileID: 0}
   habilityTarget: []
 --- !u!1 &7190321824623782509
 GameObject:
@@ -663,6 +621,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02537aec73e2a4d4482c492a7b33035a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  battleManager: {fileID: 0}
   nombre: Rose
   listaHabilidades:
   - {fileID: 7753111297847955948}
@@ -671,6 +630,7 @@ MonoBehaviour:
   armadura: Peto de cuero
   indexResistencia: 0
   rivales: []
+  animator: {fileID: 0}
 --- !u!1 &7190321824625050325
 GameObject:
   m_ObjectHideFlags: 0
@@ -823,6 +783,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02537aec73e2a4d4482c492a7b33035a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  battleManager: {fileID: 0}
   nombre: Conrad
   listaHabilidades:
   - {fileID: 1574595355282871154}
@@ -831,6 +792,7 @@ MonoBehaviour:
   armadura: Armadura Colosal de Guerra
   indexResistencia: 6
   rivales: []
+  animator: {fileID: 0}
 --- !u!1 &7190321825019373797
 GameObject:
   m_ObjectHideFlags: 0
@@ -983,6 +945,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02537aec73e2a4d4482c492a7b33035a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  battleManager: {fileID: 0}
   nombre: Caspian
   listaHabilidades:
   - {fileID: 0}
@@ -993,6 +956,7 @@ MonoBehaviour:
   armadura: Armadura de combate
   indexResistencia: 4
   rivales: []
+  animator: {fileID: 0}
 --- !u!1 &7190321826078239146
 GameObject:
   m_ObjectHideFlags: 0
@@ -1076,6 +1040,8 @@ MonoBehaviour:
   - {fileID: 7190321824625050325}
   - {fileID: 7190321824623782509}
   speed: 1.5
+  cantidadPociones: 0
+  isOnBattle: 0
   startingPosition: {fileID: 11400000, guid: aa08e6e9f87901d44bda0410c9f8fb72, type: 2}
 --- !u!61 &1052009158
 BoxCollider2D:
@@ -1136,7 +1102,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3870766035114931171}
-  - {fileID: 4469851582165600740}
   m_Father: {fileID: 7190321826078239141}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1256,6 +1221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02537aec73e2a4d4482c492a7b33035a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  battleManager: {fileID: 0}
   nombre: Dominic
   listaHabilidades:
   - {fileID: 1807113024892122180}
@@ -1265,6 +1231,7 @@ MonoBehaviour:
   armadura: Peto de cuero con refuerzos
   indexResistencia: 0
   rivales: []
+  animator: {fileID: 0}
 --- !u!1 &8238089987801983992
 GameObject:
   m_ObjectHideFlags: 0
@@ -1317,5 +1284,4 @@ MonoBehaviour:
   personaje: {fileID: 8611726785669174824}
   indexDado1: 10
   indexDado2: 4
-  projectileSpawner: {fileID: 0}
   habilityTarget: []

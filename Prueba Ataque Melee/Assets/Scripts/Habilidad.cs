@@ -7,9 +7,13 @@ public class Habilidad : MonoBehaviour
 {
     [SerializeField] private Personaje personaje;
     [SerializeField] private int indexDado1, indexDado2;
-    [SerializeField] private Transform projectileSpawner;
     [SerializeField] private List<Personaje> habilityTarget;
+    public BattleManager battleManager;
 
+    private void Awake()
+    {
+        battleManager = FindAnyObjectByType<BattleManager>();
+    }
     // Update is called once per frame
     void Update()
     {
@@ -29,7 +33,7 @@ public class Habilidad : MonoBehaviour
             Debug.Log("Pifia");
         }
 
-        else if(dadoInicial >= 4 && dadoInicial >= 9)
+        else if(dadoInicial >= 4 && dadoInicial <= 9)
         {
             //Se calcula el daño a realizar
             float num = (Random.Range(0, 10) * 10) + (Random.Range(0, 10));
@@ -61,6 +65,8 @@ public class Habilidad : MonoBehaviour
             damage = (Random.Range(0, indexDado1) + (Random.Range(0, indexDado2) + (Random.Range(0, 8))));
             Debug.Log("Critico");
         }
+
+        Debug.Log($"El daño a realizar es: {damage}");
         return damage;
     }
 
@@ -70,6 +76,7 @@ public class Habilidad : MonoBehaviour
         foreach (Personaje p in habilityTarget)
         {
             p.TakeDamage(CalculateDamage());
+            battleManager.turno++;
         }
     }
 
