@@ -2645,7 +2645,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 814262078}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 10.699715, y: 1.2816026, z: -1.8472292}
   m_LocalScale: {x: 2.285267, y: 1.9822478, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5297,6 +5297,8 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: 5796325199197766855, guid: a98e5cbe2dd159d45acca1e4eb283f5d, type: 2}
     value: {fileID: 0}
+  - key: {fileID: 175044610490064795, guid: a98e5cbe2dd159d45acca1e4eb283f5d, type: 2}
+    value: {fileID: 814262083}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &1585208120

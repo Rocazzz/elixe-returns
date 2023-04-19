@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 public class BattleManager : MonoBehaviour
 {
-    //Se deben añadir los heroes, el enemigo
+    //Se deben aï¿½adir los heroes, el enemigo
     //public GameObject enemySlot;
     public List<Heroe> listaHeroesEnBatalla = new List<Heroe>();
     public List<Enemigo> listaEnemigosEnBatalla = new List<Enemigo>();
@@ -209,7 +209,7 @@ public class BattleManager : MonoBehaviour
 
             else if (turno - listaHeroesEnBatalla.Count >= listaEnemigosEnBatalla.Count)
             {
-                turno = -1;
+                turno = 0;
             }
         }
         else if (CheckHeroesConVida() && !CheckEnemigosConVida())

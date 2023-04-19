@@ -2905,7 +2905,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   personaje: {fileID: 0}
   index: 0
-  escena: PuebloFinal
+  escena: Final
 --- !u!1 &1031332916
 GameObject:
   m_ObjectHideFlags: 0
