@@ -9,8 +9,16 @@ public class Enemigo : Personaje
     [SerializeField] private int cantPociones, cantCofres, cantOro;
     [SerializeField] private bool sueltaEscapulario;
 
-
-    // Start is called before the first frame update
+    private void Start()
+    {
+        foreach (Enemigo enemigo in AlmacenarEnemigosVencidos.listaEnemigosVencidos)
+        {
+            if (enemigo.nombre.Equals(nombre))
+            {
+                Destroy(enemigo);
+            }
+        }
+    }
     void Awake()
     {
         foreach (Heroe hero in FindFirstObjectByType<PlayersMovement>().GetComponentsInChildren<Heroe>())

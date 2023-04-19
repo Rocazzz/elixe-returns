@@ -199,7 +199,7 @@ public class BattleManager : MonoBehaviour
     {
         if (CheckHeroesConVida() && CheckEnemigosConVida())
         {
-            if (turno == 0 || turno < listaHeroesEnBatalla.Count)
+            if (turno < listaHeroesEnBatalla.Count)
             {
                 TurnoDeAtaque(listaHeroesEnBatalla[turno]);
             }
@@ -218,6 +218,10 @@ public class BattleManager : MonoBehaviour
             Debug.Log("Ganador");
             isWinner = true;
             TerminarBatalla();
+            foreach(Enemigo enemigo in listaEnemigosEnBatalla)
+            {
+                AlmacenarEnemigosVencidos.listaEnemigosVencidos.Add(enemigo);
+            }
 
             pantallaGanador.SetActive(true);
         }
