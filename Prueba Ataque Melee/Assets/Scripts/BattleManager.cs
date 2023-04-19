@@ -26,38 +26,7 @@ public class BattleManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (CheckHeroesConVida() && CheckEnemigosConVida())
-        {
-            if (turno < listaHeroesEnBatalla.Count)
-            {
-                TurnoDeAtaque(listaHeroesEnBatalla[turno]);
-            }
-            else if (turno >= listaHeroesEnBatalla.Count && turno < (listaEnemigosEnBatalla.Count + listaHeroesEnBatalla.Count))
-            {
-                TurnoDeAtaque(listaEnemigosEnBatalla[turno - listaHeroesEnBatalla.Count]);
-            }
-            else if (turno - listaHeroesEnBatalla.Count >= listaEnemigosEnBatalla.Count)
-            {
-                turno = 0;
-            }
-        }
-        else if(CheckHeroesConVida() && !CheckEnemigosConVida())
-        {
-            Debug.Log("Ganador");
-            isWinner = true;
-            TerminarBatalla();
-
-            pantallaGanador.SetActive(true);
-        }
-
-        else if(!CheckHeroesConVida() && CheckEnemigosConVida())
-        {
-            Debug.Log("Perdedor");
-            isWinner = false;
-            TerminarBatalla();
-
-            pantallaPerdedor.SetActive(true);
-        }
+        
     }
 
 
@@ -119,13 +88,16 @@ public class BattleManager : MonoBehaviour
                     mensaje3.SetActive(false);
 
                     int habilidadALanzar = UnityEngine.Random.Range(0, player.listaHabilidades.Count());
+                    Debug.Log("Se animo");
                     player.CambiarAnimacion("attack"+(habilidadALanzar+1));
-                    //player.LanzarHabilidad(habilidadALanzar);
+
+                    player.LanzarHabilidad(habilidadALanzar);
                 }
                 else
                 {
                     listaEnemigosEnBatalla.Remove(listaEnemigosEnBatalla[turno]);
                     turno++;
+
                 }
             }
 
@@ -169,6 +141,8 @@ public class BattleManager : MonoBehaviour
         {
             listaEnemigosEnBatalla.Add(enemy);
         }
+
+        ActualizarTurno();
     }
 
     public bool CheckHeroesConVida()
@@ -229,6 +203,43 @@ public class BattleManager : MonoBehaviour
         foreach (Enemigo enemigo in listaEnemigosEnBatalla)
         {
             enemigo.GetComponentInChildren<Slider>().gameObject.SetActive(false);
+        }
+    }
+
+    public void ActualizarTurno()
+    {
+        if (CheckHeroesConVida() && CheckEnemigosConVida())
+        {
+            if (turno == 0 || turno < listaHeroesEnBatalla.Count)
+            {
+                TurnoDeAtaque(listaHeroesEnBatalla[turno]);
+            }
+            else if (turno >= listaHeroesEnBatalla.Count && turno < (listaEnemigosEnBatalla.Count + listaHeroesEnBatalla.Count))
+            {
+                TurnoDeAtaque(listaEnemigosEnBatalla[turno - listaHeroesEnBatalla.Count]);
+            }
+
+            else if (turno - listaHeroesEnBatalla.Count >= listaEnemigosEnBatalla.Count)
+            {
+                turno = 0;
+            }
+        }
+        else if (CheckHeroesConVida() && !CheckEnemigosConVida())
+        {
+            Debug.Log("Ganador");
+            isWinner = true;
+            TerminarBatalla();
+
+            pantallaGanador.SetActive(true);
+        }
+
+        else if (!CheckHeroesConVida() && CheckEnemigosConVida())
+        {
+            Debug.Log("Perdedor");
+            isWinner = false;
+            TerminarBatalla();
+
+            pantallaPerdedor.SetActive(true);
         }
     }
 }

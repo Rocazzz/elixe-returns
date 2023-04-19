@@ -31,6 +31,7 @@ public class Heroe : Personaje
             GetComponentInParent<PlayersMovement>().cantidadPociones--;
             Debug.Log($"Usaste una poción. Tu vida ahora es: {vida}");
             battleManager.turno++;
+            battleManager.ActualizarTurno();
         }
         else
         {

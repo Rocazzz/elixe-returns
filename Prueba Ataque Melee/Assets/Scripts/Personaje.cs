@@ -33,6 +33,7 @@ public class Personaje : MonoBehaviour
     {
         listaHabilidades[index].Atacar();
         battleManager.turno++;
+        battleManager.ActualizarTurno();
     }
 
     public void TakeDamage(float cant)
@@ -92,6 +93,11 @@ public class Personaje : MonoBehaviour
         }
         else if (this is Enemigo)
         {
+            GetComponent<Enemigo>().SoltarDrop();
+        }
+        else if (this is Elixe)
+        {
+            CambiarAnimacion("death");
             GetComponent<Enemigo>().SoltarDrop();
         }
         
