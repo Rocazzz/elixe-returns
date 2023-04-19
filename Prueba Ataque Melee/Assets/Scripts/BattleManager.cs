@@ -110,6 +110,15 @@ public class BattleManager : MonoBehaviour
                     turno++;
                 }
             }
+            else if (player.GetType() == typeof(Elixe))
+            {
+                if(!player.isDead)
+                {
+                    int habilidadALanzar = UnityEngine.Random.Range(0, player.listaHabilidades.Count());
+                    player.CambiarAnimacion("attack"+(habilidadALanzar+1));
+                }
+            }
+
             else if (player.GetType() == typeof(Enemigo))
             {
                 if (!player.isDead)

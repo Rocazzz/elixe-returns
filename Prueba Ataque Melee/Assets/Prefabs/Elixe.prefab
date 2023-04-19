@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3512949074409452162}
   - component: {fileID: 3512949074409452161}
   - component: {fileID: 3817647481105859208}
-  - component: {fileID: 5858417826441559558}
+  - component: {fileID: 8535643469242624019}
   m_Layer: 0
   m_Name: Elixe
   m_TagString: Enemigo
@@ -77,12 +77,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 20
-  m_Sprite: {fileID: 1747450092, guid: 7f1fdfd25f823034dbe571c445d62575, type: 3}
+  m_Sprite: {fileID: 3234629978573100161, guid: 7f1fdfd25f823034dbe571c445d62575, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.56, y: 1.03}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -98,7 +98,7 @@ Animator:
   m_GameObject: {fileID: 3512949074409452160}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6084a7600bd13d8459c02673d7345580, type: 2}
+  m_Controller: {fileID: 9100000, guid: ed7e739062147dd4b9ec99a557d275ce, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -125,9 +125,9 @@ BoxCollider2D:
   m_Offset: {x: -0.12, y: -0.26}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.56, y: 1.03}
-    newSize: {x: 1, y: 1}
+    pivot: {x: 0.32893807, y: 0.3540271}
+    oldSize: {x: 0.56, y: 1}
+    newSize: {x: 0.56, y: 1.03}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -135,7 +135,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.27, y: 0.51}
   m_EdgeRadius: 0
---- !u!114 &5858417826441559558
+--- !u!114 &8535643469242624019
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -144,12 +144,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 3512949074409452160}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 488f3f66f01158745ba59289552f5a8c, type: 3}
+  m_Script: {fileID: 11500000, guid: a85f617cf1700134f96641d7cecf47c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   nombre: Elixe
   listaHabilidades:
-  - {fileID: 5052651749028647450, guid: ce67e7d22875ce24f9bec50e67a391ee, type: 3}
+  - {fileID: 5052651749028647450}
   - {fileID: 6786556446072742733}
   vida: 90
   fuerza: 20
@@ -159,10 +159,10 @@ MonoBehaviour:
   battleManager: {fileID: 0}
   BarraDeVida: {fileID: 0}
   rivales: []
-  animator: {fileID: 0}
+  animator: {fileID: 3512949074409452161}
   cantPociones: 8
   cantCofres: 5
-  cantOro: 100
+  cantOro: 0
   sueltaEscapulario: 1
 --- !u!1 &3781477280254487763
 GameObject:
@@ -213,7 +213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37c244f3adaaeb04188d9e9607be24ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  personaje: {fileID: 5858417826441559558}
+  personaje: {fileID: 0}
   indexDado1: 4
   indexDado2: 6
   habilityTarget: []
@@ -305,7 +305,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37c244f3adaaeb04188d9e9607be24ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  personaje: {fileID: 5858417826441559558}
+  personaje: {fileID: 0}
   indexDado1: 6
   indexDado2: 6
   habilityTarget: []
