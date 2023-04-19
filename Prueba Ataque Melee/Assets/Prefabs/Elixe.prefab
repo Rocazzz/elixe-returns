@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3817647481105859208}
   - component: {fileID: 5858417826441559558}
   m_Layer: 0
-  m_Name: Enemigo1
+  m_Name: Elixe
   m_TagString: Enemigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 20
-  m_Sprite: {fileID: 21300000, guid: bacb697df678f4a33b3a91a62402c0bc, type: 3}
+  m_Sprite: {fileID: -1379058409, guid: 624b2e31da2e85f4fb6f081504d8c80a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,7 +98,7 @@ Animator:
   m_GameObject: {fileID: 3512949074409452160}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1e25eabdd9637fb47baa92e57a7a67c3, type: 2}
+  m_Controller: {fileID: 9100000, guid: 17f3edd2e1136dc42a798362bedfb7c0, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -122,18 +122,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.03}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.33, y: 0.45}
+    oldSize: {x: 0.44, y: 0.5302865}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.33, y: 0.45}
+  m_Size: {x: 0.36, y: 0.48}
   m_EdgeRadius: 0
 --- !u!114 &5858417826441559558
 MonoBehaviour:
@@ -147,22 +147,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 488f3f66f01158745ba59289552f5a8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nombre: Esqueleto
+  nombre: Elixe
   listaHabilidades:
   - {fileID: 5052651749028647450}
-  vida: 60
-  fuerza: 15
-  armadura: 
-  indexResistencia: 0
+  vida: 90
+  fuerza: 20
+  armadura: "Protecci\xF3n M\xE1gica"
+  indexResistencia: 6
   isDead: 0
   battleManager: {fileID: 0}
   BarraDeVida: {fileID: 0}
   rivales: []
   animator: {fileID: 0}
-  cantPociones: 3
-  cantCofres: 0
+  cantPociones: 8
+  cantCofres: 5
   cantOro: 100
-  sueltaEscapulario: 0
+  sueltaEscapulario: 1
 --- !u!1 &3781477280254487763
 GameObject:
   m_ObjectHideFlags: 0

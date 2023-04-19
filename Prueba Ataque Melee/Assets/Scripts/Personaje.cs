@@ -14,7 +14,7 @@ public class Personaje : MonoBehaviour
     public float indexResistencia;
     public bool isDead;
     public BattleManager battleManager;
-//    public Slider BarraDeVida;
+    public Slider BarraDeVida;
 
     public List<Personaje> rivales;
 
@@ -24,7 +24,11 @@ public class Personaje : MonoBehaviour
     {
         isDead = false;
         battleManager = FindObjectOfType<BattleManager>();
+        BarraDeVida = GetComponentInChildren<Slider>();
+        BarraDeVida.maxValue = vida;
+        BarraDeVida.value = vida;
     }
+
     public void LanzarHabilidad(int index)
     {
         listaHabilidades[index].Atacar();
@@ -70,7 +74,7 @@ public class Personaje : MonoBehaviour
         {
             vida -= cant;
         }
-
+        BarraDeVida.value = vida;
         Debug.Log($"La vida actual ahora es: {vida}");
 
         if(vida <= 0)
