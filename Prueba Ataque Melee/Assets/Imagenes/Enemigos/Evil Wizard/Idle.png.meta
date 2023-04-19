@@ -155,8 +155,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< Updated upstream
       spriteID: 0dda37db0ba1527419a1377e7bd8209f
       internalID: 886751818
+=======
+      spriteID: f739eb75db2181c46b026610ca45d03c
+      internalID: 1747450092
+>>>>>>> Stashed changes
       vertices: []
       indices: 
       edges: []
@@ -165,10 +170,17 @@ TextureImporter:
       name: Idle_5
       rect:
         serializedVersion: 2
+<<<<<<< Updated upstream
         x: 102
         y: 71
         width: 73
         height: 117
+=======
+        x: 108
+        y: 83
+        width: 57
+        height: 95
+>>>>>>> Stashed changes
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -176,8 +188,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< Updated upstream
       spriteID: baacc3b3b3a19ae4d85057ea74bd36d9
       internalID: -443325902
+=======
+      spriteID: 3a30f03f8cbc8844eb619fea6a45a33e
+      internalID: 84994559
+>>>>>>> Stashed changes
       vertices: []
       indices: 
       edges: []
@@ -186,10 +203,17 @@ TextureImporter:
       name: Idle_6
       rect:
         serializedVersion: 2
+<<<<<<< Updated upstream
         x: 347
         y: 73
         width: 78
         height: 116
+=======
+        x: 358
+        y: 83
+        width: 56
+        height: 100
+>>>>>>> Stashed changes
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -197,8 +221,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< Updated upstream
       spriteID: 684fe72fcdeb76c4da4c2e09a0113697
       internalID: -1650360559
+=======
+      spriteID: 6bbf2cfc15f65234c9bf094c1220ef38
+      internalID: 1822230290
+>>>>>>> Stashed changes
       vertices: []
       indices: 
       edges: []
@@ -207,10 +236,17 @@ TextureImporter:
       name: Idle_7
       rect:
         serializedVersion: 2
+<<<<<<< Updated upstream
         x: 600
         y: 77
         width: 69
         height: 111
+=======
+        x: 608
+        y: 83
+        width: 56
+        height: 103
+>>>>>>> Stashed changes
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -218,8 +254,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< Updated upstream
       spriteID: 889777940dfdb9340bf78742c8573ee5
       internalID: 826358724
+=======
+      spriteID: 816046056dc0a9445b41bb40e385f54c
+      internalID: -387975943
+>>>>>>> Stashed changes
       vertices: []
       indices: 
       edges: []
@@ -230,8 +271,13 @@ TextureImporter:
         serializedVersion: 2
         x: 1108
         y: 83
+<<<<<<< Updated upstream
         width: 62
         height: 108
+=======
+        width: 57
+        height: 100
+>>>>>>> Stashed changes
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -239,8 +285,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< Updated upstream
       spriteID: 7020ff2bfa414e848aa08039549d573b
       internalID: 1043125145
+=======
+      spriteID: 54667429afd35b6448131a996b9879e9
+      internalID: 1171087433
+>>>>>>> Stashed changes
       vertices: []
       indices: 
       edges: []
@@ -249,10 +300,17 @@ TextureImporter:
       name: Idle_9
       rect:
         serializedVersion: 2
+<<<<<<< Updated upstream
         x: 1353
         y: 78
         width: 70
         height: 112
+=======
+        x: 1358
+        y: 83
+        width: 55
+        height: 104
+>>>>>>> Stashed changes
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -260,8 +318,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< Updated upstream
       spriteID: a9c5e97adfaafe34fbc9729a35a57319
       internalID: 2002794751
+=======
+      spriteID: 293b5dacab06f83439bedf59599ca59f
+      internalID: 1154337074
+>>>>>>> Stashed changes
       vertices: []
       indices: 
       edges: []
@@ -272,8 +335,13 @@ TextureImporter:
         serializedVersion: 2
         x: 1608
         y: 83
+<<<<<<< Updated upstream
         width: 61
         height: 103
+=======
+        width: 54
+        height: 97
+>>>>>>> Stashed changes
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -281,8 +349,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< Updated upstream
       spriteID: 7edb33454399d7f45bec0fb35dbe9ef5
       internalID: 96429995
+=======
+      spriteID: 4fc11d983725110468a963aa17b2df86
+      internalID: 1019663800
+>>>>>>> Stashed changes
       vertices: []
       indices: 
       edges: []
@@ -293,8 +366,13 @@ TextureImporter:
         serializedVersion: 2
         x: 1858
         y: 83
+<<<<<<< Updated upstream
         width: 62
         height: 102
+=======
+        width: 56
+        height: 97
+>>>>>>> Stashed changes
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -302,8 +380,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< Updated upstream
       spriteID: 4259db87831a0f94391c1c43451e6a78
       internalID: -1232948617
+=======
+      spriteID: e028464d0fbe6ef4da588387ed0607dc
+      internalID: 928823193
+>>>>>>> Stashed changes
       vertices: []
       indices: 
       edges: []
@@ -319,6 +402,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+<<<<<<< Updated upstream
       Idle_0: -645552675
       Idle_1: 1682717085
       Idle_10: -1198917040
@@ -336,6 +420,25 @@ TextureImporter:
       Idle_7: 826358724
       Idle_8: 1043125145
       Idle_9: 2002794751
+=======
+      Idle_0: 1564247649
+      Idle_1: 498908950
+      Idle_10: 609643928
+      Idle_11: 1019663800
+      Idle_12: 928823193
+      Idle_13: 1341264281
+      Idle_14: -1346989245
+      Idle_15: 724541473
+      Idle_16: -1216994212
+      Idle_2: 1747450092
+      Idle_3: 1025523530
+      Idle_4: 858281993
+      Idle_5: 84994559
+      Idle_6: 1822230290
+      Idle_7: -387975943
+      Idle_8: 1171087433
+      Idle_9: 1154337074
+>>>>>>> Stashed changes
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
