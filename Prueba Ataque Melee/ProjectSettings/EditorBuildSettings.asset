@@ -18,14 +18,20 @@ EditorBuildSettings:
     path: Assets/Scenes/Bosque.unity
     guid: 52639d47412f0024c9338252ef41a716
   - enabled: 1
+    path: Assets/Scenes/BatallaConCosa.unity
+    guid: 4212563614499c3408ccfae6caaba47e
+  - enabled: 1
+    path: Assets/Scenes/BatallaConEsqueleto.unity
+    guid: c1ba38748c27d0440a772149a72b6dee
+  - enabled: 1
+    path: Assets/Scenes/BatallaConNecromago.unity
+    guid: 7651621af082d32488a89ee78f220ca4
+  - enabled: 1
     path: Assets/Scenes/BatallaFinal.unity
     guid: c039518438cb2024d9ca774f04fae412
   - enabled: 1
     path: Assets/Scenes/BatallaConElixe.unity
     guid: e3e0983af147829429a486f1ce0f6d82
-  - enabled: 1
-    path: Assets/Scenes/BatallaConCosa.unity
-    guid: 4212563614499c3408ccfae6caaba47e
   - enabled: 1
     path: Assets/Scenes/pueblofinal.unity
     guid: 1f7c57d1eceebad40a93b6764bdf353e

@@ -15,7 +15,7 @@ public class Enemigo : Personaje
         {
             if (enemigo.nombre.Equals(nombre))
             {
-                Destroy(enemigo);
+                Destroy(gameObject);
             }
         }
     }
