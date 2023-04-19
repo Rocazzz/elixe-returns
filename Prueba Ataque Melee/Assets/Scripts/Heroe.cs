@@ -5,7 +5,7 @@ using UnityEngine;
 public class Heroe : Personaje
 {
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         foreach (Enemigo enemy in FindObjectsOfType<Enemigo>())
         {
@@ -21,6 +21,20 @@ public class Heroe : Personaje
 
     public void UsarPocion()
     {
-        vida += 20;
+        if (GetComponentInParent<PlayersMovement>().cantidadPociones > 0)
+        {
+            vida += 20;
+            if (vida >= 100)
+            {
+                vida = 100;
+            }
+            GetComponentInParent<PlayersMovement>().cantidadPociones--;
+            Debug.Log($"Usaste una poción. Tu vida ahora es: {vida}");
+            battleManager.turno++;
+        }
+        else
+        {
+            Debug.Log("No tienes pociones!");
+        }
     }
 }

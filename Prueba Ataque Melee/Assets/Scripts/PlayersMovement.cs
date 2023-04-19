@@ -9,8 +9,14 @@ public class PlayersMovement : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private GameObject[] players;
     [SerializeField] private float speed;
-    [SerializeField] private int cantidadPociones;
+    public int cantidadPociones, cantidadCofres;
     [SerializeField] private bool isOnBattle;
+    public int dinero;
+    public Dictionary<string, int> inventario = new Dictionary<string, int>()
+    {
+        { "Pociones", 0 },
+        { "Cofres", 0 }
+    };
     
     //Cree un Vector Value para guardan la posicion de personajes luego de transicionar
     [SerializeField] private VectorValue startingPosition;
@@ -35,7 +41,7 @@ public class PlayersMovement : MonoBehaviour
         {
             transform.position = new Vector3(-5.5f, -1.8f, 0);
         }
-        
+        RefreshInventario();
     }
 
     public void moverse()
@@ -79,6 +85,12 @@ public class PlayersMovement : MonoBehaviour
                 player.GetComponent<Transform>().localScale = new Vector3(-1, 1, 1);
             }
         }
+    }
+
+    public void RefreshInventario()
+    {
+        inventario["Pociones"] = cantidadPociones;
+        inventario["Cofres"] = cantidadCofres;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

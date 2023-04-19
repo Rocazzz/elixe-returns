@@ -634,9 +634,8 @@ MonoBehaviour:
   fuerza: 16
   armadura: Peto de cuero
   indexResistencia: 0
-  BarraDeVida: {fileID: 0}
   rivales: []
-  animator: {fileID: 0}
+  animator: {fileID: 7190321824623782511}
 --- !u!1 &7190321824625050325
 GameObject:
   m_ObjectHideFlags: 0
@@ -796,9 +795,8 @@ MonoBehaviour:
   fuerza: 19
   armadura: Armadura Colosal de Guerra
   indexResistencia: 6
-  BarraDeVida: {fileID: 0}
   rivales: []
-  animator: {fileID: 0}
+  animator: {fileID: 7190321824625050327}
 --- !u!1 &7190321825019373797
 GameObject:
   m_ObjectHideFlags: 0
@@ -960,9 +958,8 @@ MonoBehaviour:
   fuerza: 23
   armadura: Armadura de combate
   indexResistencia: 4
-  BarraDeVida: {fileID: 0}
   rivales: []
-  animator: {fileID: 0}
+  animator: {fileID: 7190321825019373799}
 --- !u!1 &7190321826078239146
 GameObject:
   m_ObjectHideFlags: 0
@@ -1235,9 +1232,8 @@ MonoBehaviour:
   fuerza: 17
   armadura: Peto de cuero con refuerzos
   indexResistencia: 0
-  BarraDeVida: {fileID: 0}
   rivales: []
-  animator: {fileID: 0}
+  animator: {fileID: 7190321826207917463}
 --- !u!1 &8238089987801983992
 GameObject:
   m_ObjectHideFlags: 0

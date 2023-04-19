@@ -27,4 +27,12 @@ public class Boton : MonoBehaviour
         personaje.CambiarAnimacion(trigger+(index+1));
         
     }
+
+    public void UtilizarPocion()
+    {
+        if(personaje is Heroe)
+        {
+            personaje.GetComponent<Heroe>().UsarPocion();
+        }
+    }
 }

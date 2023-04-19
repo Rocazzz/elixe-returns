@@ -25,7 +25,7 @@ public class Habilidad : MonoBehaviour
     {
         float fuerza = personaje.fuerza;
         int dadoInicial = Random.Range(0, 10);
-        float damage = 0;
+        int damage = 0;
 
         if(dadoInicial > 0 && dadoInicial <= 3)
         {

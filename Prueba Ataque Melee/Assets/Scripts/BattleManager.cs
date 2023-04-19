@@ -9,9 +9,9 @@ using UnityEngine.UI;
 public class BattleManager : MonoBehaviour
 {
     //Se deben añadir los heroes, el enemigo
-    
-    [SerializeField] private List<Heroe> listaHeroesEnBatalla = new List<Heroe>();
-    [SerializeField] private List<Enemigo> listaEnemigosEnBatalla = new List<Enemigo>();
+    //public GameObject enemySlot;
+    public List<Heroe> listaHeroesEnBatalla = new List<Heroe>();
+    public List<Enemigo> listaEnemigosEnBatalla = new List<Enemigo>();
     [SerializeField] private GameObject mensaje1, mensaje2, mensaje3;
     public int turno = 0;
     public bool isWinner;
@@ -41,52 +41,79 @@ public class BattleManager : MonoBehaviour
                 turno = 0;
             }
         }
+        else if(CheckHeroesConVida() && !CheckEnemigosConVida())
+        {
+            isWinner = true;
+            
+        }
     }
 
 
     public void TurnoDeAtaque(Personaje player)
     {
-        if(player.GetType() == typeof(Heroe))
+        if(player != null)
         {
-            if (player.listaHabilidades.Length == 1)
+            if (player.GetType() == typeof(Heroe))
             {
-                mensaje1.SetActive(true);
-                foreach (Boton boton in mensaje1.GetComponentsInChildren<Boton>())
+                if (player.isDead == false)
                 {
-                    boton.personaje = player;
-                }
+                    if (player.listaHabilidades.Length == 1)
+                    {
+                        mensaje1.SetActive(true);
+                        foreach (Boton boton in mensaje1.GetComponentsInChildren<Boton>())
+                        {
+                            boton.personaje = player;
+                        }
 
-                mensaje2.SetActive(false);
-                mensaje3.SetActive(false);
+                        mensaje2.SetActive(false);
+                        mensaje3.SetActive(false);
+                    }
+
+                    else if (player.listaHabilidades.Length == 2)
+                    {
+                        mensaje1.SetActive(false);
+                        mensaje2.SetActive(true);
+                        foreach (Boton boton in mensaje2.GetComponentsInChildren<Boton>())
+                        {
+                            boton.personaje = player;
+                        }
+                        mensaje3.SetActive(false);
+                    }
+
+                    else if (player.listaHabilidades.Length == 3)
+                    {
+                        mensaje1.SetActive(false);
+                        mensaje2.SetActive(false);
+                        mensaje3.SetActive(true);
+                        foreach (Boton boton in mensaje3.GetComponentsInChildren<Boton>())
+                        {
+                            boton.personaje = player;
+                        }
+                        mensaje3.GetComponentInChildren<Boton>().personaje = player;
+                    }
+                }
+                else
+                {
+                    listaHeroesEnBatalla.Remove(listaHeroesEnBatalla[turno]);
+                    turno++;
+                }
             }
-
-            else if (player.listaHabilidades.Length == 2)
+            else if (player.GetType() == typeof(Enemigo))
             {
-                mensaje1.SetActive(false);
-                mensaje2.SetActive(true);
-                foreach (Boton boton in mensaje2.GetComponentsInChildren<Boton>())
+                if (!player.isDead)
                 {
-                    boton.personaje = player;
+                    player.LanzarHabilidad(0);
                 }
-                mensaje3.SetActive(false);
-            }
-
-            else if (player.listaHabilidades.Length == 3)
-            {
-                mensaje1.SetActive(false);
-                mensaje2.SetActive(false);
-                mensaje3.SetActive(true);
-                foreach (Boton boton in mensaje3.GetComponentsInChildren<Boton>())
+                else
                 {
-                    boton.personaje = player;
+                    listaEnemigosEnBatalla.Remove(listaEnemigosEnBatalla[turno]);
+                    turno++;
                 }
-                mensaje3.GetComponentInChildren<Boton>().personaje = player;
             }
         }
-        else if (player.GetType() == typeof(Enemigo))
+        else
         {
-            player.LanzarHabilidad(0);
-            Debug.Log("Holis");
+            turno++;
         }
     }
 
@@ -97,6 +124,9 @@ public class BattleManager : MonoBehaviour
         mensaje1.SetActive(false);
         mensaje2.SetActive(false);
         mensaje3.SetActive(false);
+        
+        //enemySlot = Instantiate(AlmacenarEnemigo.enemigoAlmacenado, new Vector3(5, -2, 0), Quaternion.Euler(0, 0, 0));
+        
 
         foreach (Heroe hero in FindFirstObjectByType<PlayersMovement>().GetComponentsInChildren<Heroe>())
         {
@@ -114,9 +144,12 @@ public class BattleManager : MonoBehaviour
         int cant = 0;
         foreach(Personaje p in listaHeroesEnBatalla)
         {
-            if(p.vida >= 0)
+            if(listaHeroesEnBatalla.Count > 0)
             {
-                cant++;
+                if (p.vida >= 0)
+                {
+                    cant++;
+                }
             }
         }
 
@@ -134,9 +167,12 @@ public class BattleManager : MonoBehaviour
         int cant = 0;
         foreach (Personaje p in listaEnemigosEnBatalla)
         {
-            if (p.vida >= 0)
+            if(listaEnemigosEnBatalla.Count > 0)
             {
-                cant++;
+                if (p.vida >= 0)
+                {
+                    cant++;
+                }
             }
         }
 
@@ -148,7 +184,6 @@ public class BattleManager : MonoBehaviour
         
         return false;
     }
-
 
     public void TerminarBatalla() { 
 
