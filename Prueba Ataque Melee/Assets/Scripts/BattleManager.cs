@@ -36,7 +36,7 @@ public class BattleManager : MonoBehaviour
             {
                 TurnoDeAtaque(listaEnemigosEnBatalla[turno - listaHeroesEnBatalla.Count]);
             }
-            else if (turno >= listaEnemigosEnBatalla.Count + listaHeroesEnBatalla.Count)
+            else if (turno - listaHeroesEnBatalla.Count >= listaEnemigosEnBatalla.Count)
             {
                 turno = 0;
             }
@@ -119,9 +119,13 @@ public class BattleManager : MonoBehaviour
                     mensaje3.SetActive(false);
 
                     int habilidadALanzar = UnityEngine.Random.Range(0, player.listaHabilidades.Count());
-                    //player.LanzarHabilidad(habilidadALanzar);
                     player.CambiarAnimacion("attack"+(habilidadALanzar+1));
                     //player.LanzarHabilidad(habilidadALanzar);
+                }
+                else
+                {
+                    listaEnemigosEnBatalla.Remove(listaEnemigosEnBatalla[turno]);
+                    turno++;
                 }
             }
 

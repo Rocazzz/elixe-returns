@@ -32,6 +32,7 @@ public class Personaje : MonoBehaviour
     public void LanzarHabilidad(int index)
     {
         listaHabilidades[index].Atacar();
+        battleManager.turno++;
     }
 
     public void TakeDamage(float cant)
