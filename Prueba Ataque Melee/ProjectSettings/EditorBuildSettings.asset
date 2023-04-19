@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/BatallaFinal.unity
     guid: c039518438cb2024d9ca774f04fae412
   - enabled: 1
+    path: Assets/Scenes/BatallaConElixe.unity
+    guid: e3e0983af147829429a486f1ce0f6d82
+  - enabled: 1
     path: Assets/Scenes/BatallaConCosa.unity
     guid: 4212563614499c3408ccfae6caaba47e
   m_configObjects: {}
