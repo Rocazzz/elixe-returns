@@ -20,18 +20,15 @@ public class Personaje : MonoBehaviour
 
     public Animator animator;
 
-    private void Start()
+    private void Awake()
     {
-        isDead = false;
-        battleManager = FindObjectOfType<BattleManager>();
-        BarraDeVida = GetComponentInChildren<Slider>();
-        BarraDeVida.maxValue = vida;
-        BarraDeVida.value = vida;
+        
     }
 
     public void LanzarHabilidad(int index)
     {
         listaHabilidades[index].Atacar();
+        Debug.Log("Se lanzó habilidad");
         battleManager.turno++;
         battleManager.ActualizarTurno();
     }
