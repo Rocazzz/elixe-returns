@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 42648371}
   - component: {fileID: 42648370}
   - component: {fileID: 42648369}
+  - component: {fileID: 42648372}
   m_Layer: 5
   m_Name: Button (Legacy)
   m_TagString: Untagged
@@ -149,18 +150,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 42648367}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.0475616, y: 1.0475616, z: 1.0475616}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1155142293}
-  m_Father: {fileID: 677367951}
-  m_RootOrder: 0
+  m_Father: {fileID: 1149783579}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -263}
+  m_AnchoredPosition: {x: 0, y: -224.78874}
   m_SizeDelta: {x: 545.48, y: 132.79}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &42648369
@@ -206,7 +207,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 42648370}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 42648372}
+        m_TargetAssemblyTypeName: Boton, Assembly-CSharp
+        m_MethodName: CambiarEscena
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &42648370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -245,6 +258,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 42648367}
   m_CullTransparentMesh: 1
+--- !u!114 &42648372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 42648367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c85fa4c7d4759dd4ba238cf622ac442f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  personaje: {fileID: 0}
+  index: 0
+  escena: Bosque
 --- !u!1 &68524067
 GameObject:
   m_ObjectHideFlags: 0
@@ -631,8 +659,8 @@ MonoBehaviour:
   mensaje1: {fileID: 797973299}
   mensaje2: {fileID: 2104875803}
   mensaje3: {fileID: 2046043885}
-  pantallaGanador: {fileID: 0}
-  pantallaPerdedor: {fileID: 0}
+  pantallaGanador: {fileID: 495330622}
+  pantallaPerdedor: {fileID: 1149783578}
   turno: 0
   isWinner: 0
 --- !u!1 &378008852
@@ -898,6 +926,7 @@ RectTransform:
   - {fileID: 1825849402}
   - {fileID: 1460119418}
   - {fileID: 1366940627}
+  - {fileID: 981039959}
   m_Father: {fileID: 1274501227}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1092,14 +1121,13 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.0475616, y: 1.0475616, z: 1.0475616}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 42648368}
+  m_Children: []
   m_Father: {fileID: 1149783579}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 50.719986}
+  m_AnchoredPosition: {x: 0, y: 31}
   m_SizeDelta: {x: 876.49, y: 208.91}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &677367952
@@ -1124,18 +1152,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 8b6e308bfb5ffb042a502bb92732331e, type: 3}
-    m_FontSize: 150
+    m_FontSize: 180
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 150
+    m_MaxSize: 180
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Los items fueron\na\xF1adidos a tu inventario"
+  m_Text: "\xA1Buena suerte para la\npr\xF3xima!"
 --- !u!222 &677367953
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1446,6 +1474,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   personaje: {fileID: 0}
   index: 2
+  escena: 
 --- !u!1 &844423681
 GameObject:
   m_ObjectHideFlags: 0
@@ -1595,6 +1624,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   personaje: {fileID: 0}
   index: 0
+  escena: 
 --- !u!114 &875931125 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8709698493911072171, guid: 5917b04b353d15d4b89c0a164bbbb54a, type: 3}
@@ -1755,6 +1785,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   personaje: {fileID: 0}
   index: 1
+  escena: 
 --- !u!1 &918783777
 GameObject:
   m_ObjectHideFlags: 0
@@ -2007,6 +2038,7 @@ GameObject:
   - component: {fileID: 981039962}
   - component: {fileID: 981039961}
   - component: {fileID: 981039960}
+  - component: {fileID: 981039963}
   m_Layer: 5
   m_Name: Button (Legacy)
   m_TagString: Untagged
@@ -2021,18 +2053,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 981039958}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.0475616, y: 1.0475616, z: 1.0475616}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 310717862}
-  m_Father: {fileID: 1366940627}
-  m_RootOrder: 0
+  m_Father: {fileID: 495330623}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -263}
+  m_AnchoredPosition: {x: 0, y: -224.78874}
   m_SizeDelta: {x: 545.48, y: 132.79}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &981039960
@@ -2078,7 +2110,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 981039961}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 981039963}
+        m_TargetAssemblyTypeName: Boton, Assembly-CSharp
+        m_MethodName: CambiarEscena
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &981039961
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2117,6 +2161,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 981039958}
   m_CullTransparentMesh: 1
+--- !u!114 &981039963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981039958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c85fa4c7d4759dd4ba238cf622ac442f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  personaje: {fileID: 0}
+  index: 0
+  escena: Bosque
 --- !u!1 &1031332916
 GameObject:
   m_ObjectHideFlags: 0
@@ -2266,6 +2325,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   personaje: {fileID: 0}
   index: 0
+  escena: 
 --- !u!1 &1033361663
 GameObject:
   m_ObjectHideFlags: 0
@@ -2575,6 +2635,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   personaje: {fileID: 0}
   index: 1
+  escena: 
 --- !u!1 &1149783578
 GameObject:
   m_ObjectHideFlags: 0
@@ -2606,6 +2667,7 @@ RectTransform:
   - {fileID: 273642632}
   - {fileID: 68524068}
   - {fileID: 677367951}
+  - {fileID: 42648368}
   m_Father: {fileID: 1274501227}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3083,8 +3145,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.0475616, y: 1.0475616, z: 1.0475616}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 981039959}
+  m_Children: []
   m_Father: {fileID: 495330623}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3115,11 +3176,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 8b6e308bfb5ffb042a502bb92732331e, type: 3}
-    m_FontSize: 150
+    m_FontSize: 180
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 150
+    m_MaxSize: 180
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -3608,6 +3669,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   personaje: {fileID: 0}
   index: 0
+  escena: 
 --- !u!1 &1568059202
 GameObject:
   m_ObjectHideFlags: 0
@@ -3841,6 +3903,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   personaje: {fileID: 0}
   index: 0
+  escena: 
 --- !u!1 &1607299431
 GameObject:
   m_ObjectHideFlags: 0
@@ -4237,6 +4300,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   personaje: {fileID: 0}
   index: 0
+  escena: 
 --- !u!1 &1916269963
 GameObject:
   m_ObjectHideFlags: 0
@@ -4654,6 +4718,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   personaje: {fileID: 0}
   index: 0
+  escena: 
 --- !u!1 &2092098922
 GameObject:
   m_ObjectHideFlags: 0
