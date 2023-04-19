@@ -25,7 +25,9 @@ public class Dialogoss : MonoBehaviour
     private int lineIndex;
 
 
-   private void Start(){
+
+   private void Start()
+   {
         AudioSource=GetComponent<AudioSource>();
         AudioSource.clip=npcVoz;
    }
