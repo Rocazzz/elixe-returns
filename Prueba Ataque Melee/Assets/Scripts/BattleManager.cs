@@ -121,7 +121,7 @@ public class BattleManager : MonoBehaviour
                     int habilidadALanzar = UnityEngine.Random.Range(0, player.listaHabilidades.Count());
                     //player.LanzarHabilidad(habilidadALanzar);
                     player.CambiarAnimacion("attack"+(habilidadALanzar+1));
-                    turno = 5;
+                    //player.LanzarHabilidad(habilidadALanzar);
                 }
             }
 
