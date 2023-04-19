@@ -66,7 +66,7 @@ public class Habilidad : MonoBehaviour
             damage = (Random.Range(0, indexDado1) + (Random.Range(0, indexDado2) + (Random.Range(0, 8))));
             Debug.Log("Critico");
         }
-
+        battleManager.turno++;
         Debug.Log($"El daño a realizar es: {damage}");
         return damage;
     }
@@ -77,7 +77,6 @@ public class Habilidad : MonoBehaviour
         foreach (Personaje p in habilityTarget)
         {
             p.TakeDamage(damage);
-            battleManager.turno++;
         }
     }
 
