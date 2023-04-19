@@ -65,7 +65,7 @@ public class BattleManager : MonoBehaviour
     {
         if(player != null)
         {
-            if (player.GetType() == typeof(Heroe))
+            if (player is Heroe)
             {
                 if (player.isDead == false)
                 {
@@ -110,16 +110,20 @@ public class BattleManager : MonoBehaviour
                     turno++;
                 }
             }
-            else if (player.GetType() == typeof(Elixe))
+            else if (player is Elixe)
             {
                 if(!player.isDead)
                 {
+                    mensaje1.SetActive(false);
+                    mensaje2.SetActive(false);
+                    mensaje3.SetActive(false);
+
                     int habilidadALanzar = UnityEngine.Random.Range(0, player.listaHabilidades.Count());
                     player.CambiarAnimacion("attack"+(habilidadALanzar+1));
                 }
             }
 
-            else if (player.GetType() == typeof(Enemigo))
+            else if (player is Enemigo)
             {
                 if (!player.isDead)
                 {
@@ -175,7 +179,7 @@ public class BattleManager : MonoBehaviour
             }
         }
 
-        if (cant == listaHeroesEnBatalla.Count)
+        if (cant > 0)
         {
             
             return true;
@@ -198,7 +202,7 @@ public class BattleManager : MonoBehaviour
             }
         }
 
-        if (cant == listaEnemigosEnBatalla.Count)
+        if (cant > 0)
         {
             
             return true;
@@ -213,12 +217,12 @@ public class BattleManager : MonoBehaviour
         mensaje3.SetActive(false);
 
         foreach(Heroe heroe in listaHeroesEnBatalla){
-            heroe.GetComponentInChildren<Canvas>().gameObject.SetActive(false);
+            heroe.GetComponentInChildren<Slider>().gameObject.SetActive(false);
         }
 
         foreach (Enemigo enemigo in listaEnemigosEnBatalla)
         {
-            enemigo.GetComponentInChildren<Canvas>().gameObject.SetActive(false);
+            enemigo.GetComponentInChildren<Slider>().gameObject.SetActive(false);
         }
     }
 }
