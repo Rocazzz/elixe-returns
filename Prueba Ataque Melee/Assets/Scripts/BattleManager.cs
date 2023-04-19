@@ -45,9 +45,7 @@ public class BattleManager : MonoBehaviour
         {
             Debug.Log("Ganador");
             isWinner = true;
-            mensaje1.SetActive(false);
-            mensaje2.SetActive(false);
-            mensaje3.SetActive(false);
+            TerminarBatalla();
 
             pantallaGanador.SetActive(true);
         }
@@ -56,9 +54,7 @@ public class BattleManager : MonoBehaviour
         {
             Debug.Log("Perdedor");
             isWinner = false;
-            mensaje1.SetActive(false);
-            mensaje2.SetActive(false);
-            mensaje3.SetActive(false);
+            TerminarBatalla();
 
             pantallaPerdedor.SetActive(true);
         }
@@ -202,7 +198,18 @@ public class BattleManager : MonoBehaviour
         return false;
     }
 
-    public void TerminarBatalla() { 
+    public void TerminarBatalla() {
+        mensaje1.SetActive(false);
+        mensaje2.SetActive(false);
+        mensaje3.SetActive(false);
 
+        foreach(Heroe heroe in listaHeroesEnBatalla){
+            heroe.GetComponentInChildren<Canvas>().gameObject.SetActive(false);
+        }
+
+        foreach (Enemigo enemigo in listaEnemigosEnBatalla)
+        {
+            enemigo.GetComponentInChildren<Canvas>().gameObject.SetActive(false);
+        }
     }
 }

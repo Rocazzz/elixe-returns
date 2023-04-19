@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3817647481105859208}
   - component: {fileID: 5858417826441559558}
   m_Layer: 0
-  m_Name: Cosa
+  m_Name: Enemigo1
   m_TagString: Enemigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -147,15 +147,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 488f3f66f01158745ba59289552f5a8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nombre: Cosa
+  nombre: Esqueleto
   listaHabilidades:
   - {fileID: 5052651749028647450}
-  vida: 80
+  vida: 60
   fuerza: 15
   armadura: 
   indexResistencia: 0
   isDead: 0
   battleManager: {fileID: 0}
+  BarraDeVida: {fileID: 0}
   rivales: []
   animator: {fileID: 0}
   cantPociones: 3
