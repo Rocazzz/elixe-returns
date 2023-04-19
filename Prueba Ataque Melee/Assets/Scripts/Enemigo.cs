@@ -28,24 +28,22 @@ public class Enemigo : Personaje
     {
         if (collision.collider.CompareTag("Player"))
         {
-            AlmacenarEnemigo.AlmacenarEsteEnemigo(gameObject);
-            SceneManager.LoadScene("Batalla");
+            AlmacenarUltimaPosicion.ultimaPosicion = collision.collider.transform.position;
+            SceneManager.LoadScene("BatallaCon"+nombre);
             Destroy(gameObject);
         }
     }
 
     public void SoltarDrop()
     {
-        PlayersMovement jugador = FindObjectOfType<PlayersMovement>();
+        Inventario.cantPociones += cantPociones;            
+        Inventario.cantCofres += cantCofres;        
 
-        jugador.cantidadPociones += cantPociones;            
-        jugador.cantidadCofres += cantCofres;        
-
-        jugador.dinero += cantOro;
+        Inventario.dinero += cantOro;
 
         if (sueltaEscapulario == true)
         {
-            jugador.inventario.Add("Escapulario de Elixe", 1);
+            Inventario.escapulario = 1;
         }
         
     }

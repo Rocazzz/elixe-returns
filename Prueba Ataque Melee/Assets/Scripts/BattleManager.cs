@@ -12,7 +12,7 @@ public class BattleManager : MonoBehaviour
     //public GameObject enemySlot;
     public List<Heroe> listaHeroesEnBatalla = new List<Heroe>();
     public List<Enemigo> listaEnemigosEnBatalla = new List<Enemigo>();
-    [SerializeField] private GameObject mensaje1, mensaje2, mensaje3;
+    [SerializeField] private GameObject mensaje1, mensaje2, mensaje3, pantallaGanador, pantallaPerdedor;
     public int turno = 0;
     public bool isWinner;
 
@@ -43,8 +43,24 @@ public class BattleManager : MonoBehaviour
         }
         else if(CheckHeroesConVida() && !CheckEnemigosConVida())
         {
+            Debug.Log("Ganador");
             isWinner = true;
-            
+            mensaje1.SetActive(false);
+            mensaje2.SetActive(false);
+            mensaje3.SetActive(false);
+
+            pantallaGanador.SetActive(true);
+        }
+
+        else if(!CheckHeroesConVida() && CheckEnemigosConVida())
+        {
+            Debug.Log("Perdedor");
+            isWinner = false;
+            mensaje1.SetActive(false);
+            mensaje2.SetActive(false);
+            mensaje3.SetActive(false);
+
+            pantallaPerdedor.SetActive(true);
         }
     }
 
@@ -124,8 +140,9 @@ public class BattleManager : MonoBehaviour
         mensaje1.SetActive(false);
         mensaje2.SetActive(false);
         mensaje3.SetActive(false);
-        
-        //enemySlot = Instantiate(AlmacenarEnemigo.enemigoAlmacenado, new Vector3(5, -2, 0), Quaternion.Euler(0, 0, 0));
+
+        pantallaGanador.SetActive(false);
+        pantallaPerdedor.SetActive(false);
         
 
         foreach (Heroe hero in FindFirstObjectByType<PlayersMovement>().GetComponentsInChildren<Heroe>())

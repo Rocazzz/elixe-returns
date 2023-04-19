@@ -21,6 +21,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Bosque.unity
     guid: 52639d47412f0024c9338252ef41a716
   - enabled: 1
-    path: Assets/Scenes/Batalla.unity
+    path: Assets/Scenes/BatallaConCosa.unity
     guid: 4212563614499c3408ccfae6caaba47e
   m_configObjects: {}
