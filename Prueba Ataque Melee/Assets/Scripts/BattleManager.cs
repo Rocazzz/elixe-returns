@@ -26,7 +26,7 @@ public class BattleManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
 
@@ -34,9 +34,10 @@ public class BattleManager : MonoBehaviour
     {
         if(player != null)
         {
-            if (player is Heroe)
+            
+            if (player.isDead == false)
             {
-                if (player.isDead == false)
+                if (player is Heroe)
                 {
                     if (player.listaHabilidades.Length == 1)
                     {
@@ -72,16 +73,10 @@ public class BattleManager : MonoBehaviour
                         }
                         mensaje3.GetComponentInChildren<Boton>().personaje = player;
                     }
+
                 }
-                else
-                {
-                    listaHeroesEnBatalla.Remove(listaHeroesEnBatalla[turno]);
-                    turno++;
-                }
-            }
-            else if (player is Elixe)
-            {
-                if(!player.isDead)
+
+                else if (player is Elixe)
                 {
                     mensaje1.SetActive(false);
                     mensaje2.SetActive(false);
@@ -89,34 +84,28 @@ public class BattleManager : MonoBehaviour
 
                     int habilidadALanzar = UnityEngine.Random.Range(0, player.listaHabilidades.Count());
                     Debug.Log("Se animo");
-                    player.CambiarAnimacion("attack"+(habilidadALanzar+1));
+                    player.CambiarAnimacion("attack" + (habilidadALanzar + 1));
 
                     player.LanzarHabilidad(habilidadALanzar);
-                }
-                else
-                {
-                    listaEnemigosEnBatalla.Remove(listaEnemigosEnBatalla[turno]);
-                    turno++;
 
                 }
-            }
 
-            else if (player is Enemigo)
-            {
-                if (!player.isDead)
+                else if (player is Enemigo)
                 {
                     player.LanzarHabilidad(0);
                 }
-                else
-                {
-                    listaEnemigosEnBatalla.Remove(listaEnemigosEnBatalla[turno]);
-                    turno++;
-                }
+            }
+            else
+            {
+                listaHeroesEnBatalla.Remove(listaHeroesEnBatalla[turno]);
+                turno++;
+                ActualizarTurno();
             }
         }
         else
         {
             turno++;
+            ActualizarTurno();
         }
     }
 

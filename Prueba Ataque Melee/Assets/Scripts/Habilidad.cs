@@ -78,7 +78,6 @@ public class Habilidad : MonoBehaviour
         {
             p.TakeDamage(damage);
         }
-        //battleManager.turno++;
     }
 
 
