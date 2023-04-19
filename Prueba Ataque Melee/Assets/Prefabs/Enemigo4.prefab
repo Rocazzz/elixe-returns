@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3817647481105859208}
   - component: {fileID: 5858417826441559558}
   m_Layer: 0
-  m_Name: Elixe
+  m_Name: Enemigo4
   m_TagString: Enemigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 20
-  m_Sprite: {fileID: 1747450092, guid: 7f1fdfd25f823034dbe571c445d62575, type: 3}
+  m_Sprite: {fileID: -1810862864, guid: 1c7efd91432716a40a2aafba0968cbeb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,7 +98,7 @@ Animator:
   m_GameObject: {fileID: 3512949074409452160}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6084a7600bd13d8459c02673d7345580, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -122,18 +122,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.12, y: -0.26}
+  m_Offset: {x: 0, y: -0.03}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.56, y: 1.03}
+    oldSize: {x: 0.23, y: 0.17}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.27, y: 0.51}
+  m_Size: {x: 0.36, y: 0.48}
   m_EdgeRadius: 0
 --- !u!114 &5858417826441559558
 MonoBehaviour:
@@ -147,23 +147,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 488f3f66f01158745ba59289552f5a8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nombre: Elixe
+  nombre: Necromago
   listaHabilidades:
-  - {fileID: 5052651749028647450, guid: ce67e7d22875ce24f9bec50e67a391ee, type: 3}
-  - {fileID: 6786556446072742733}
-  vida: 90
-  fuerza: 20
-  armadura: "Protecci\xF3n M\xE1gica"
-  indexResistencia: 6
+  - {fileID: 5052651749028647450}
+  vida: 65
+  fuerza: 12
+  armadura: 
+  indexResistencia: 0
   isDead: 0
   battleManager: {fileID: 0}
   BarraDeVida: {fileID: 0}
   rivales: []
   animator: {fileID: 0}
-  cantPociones: 8
-  cantCofres: 5
-  cantOro: 100
-  sueltaEscapulario: 1
+  cantPociones: 4
+  cantCofres: 0
+  cantOro: 250
+  sueltaEscapulario: 0
 --- !u!1 &3781477280254487763
 GameObject:
   m_ObjectHideFlags: 0
@@ -215,7 +214,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   personaje: {fileID: 5858417826441559558}
   indexDado1: 4
-  indexDado2: 6
+  indexDado2: 0
   habilityTarget: []
   battleManager: {fileID: 0}
 --- !u!1 &5487602199930277180
@@ -247,7 +246,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6586403995551011931}
-  - {fileID: 8087199845835617931}
   m_Father: {fileID: 3512949074409452163}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -256,57 +254,3 @@ RectTransform:
   m_AnchoredPosition: {x: -0.4695331, y: -0.59220594}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &5592528805678121989
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8087199845835617931}
-  - component: {fileID: 6786556446072742733}
-  m_Layer: 5
-  m_Name: Habilidad2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &8087199845835617931
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5592528805678121989}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5251620145824487080}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &6786556446072742733
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5592528805678121989}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37c244f3adaaeb04188d9e9607be24ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  personaje: {fileID: 5858417826441559558}
-  indexDado1: 6
-  indexDado2: 6
-  habilityTarget: []
-  battleManager: {fileID: 0}
