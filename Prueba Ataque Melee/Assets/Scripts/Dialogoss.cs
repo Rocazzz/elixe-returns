@@ -9,7 +9,7 @@ public class Dialogoss : MonoBehaviour
     [SerializeField] private int charsToPlay;
 
 
-    //[SerializeField] private AudioClip npcVoz;
+    [SerializeField] private AudioClip npcVoz;
     [SerializeField] private GameObject dialogueMark;
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TMP_Text dialogueText;
@@ -18,7 +18,7 @@ public class Dialogoss : MonoBehaviour
 
    
 
-    //private AudioSource AudioSource;
+    private AudioSource AudioSource;
 
     private bool isPlayerInRange;
     private bool didDialogueStart;
@@ -26,8 +26,8 @@ public class Dialogoss : MonoBehaviour
 
 
    private void Start(){
-        //AudioSource=GetComponent<AudioSource>();
-        //AudioSource.clip=npcVoz;
+        AudioSource=GetComponent<AudioSource>();
+        AudioSource.clip=npcVoz;
    }
 
 
@@ -88,7 +88,7 @@ public class Dialogoss : MonoBehaviour
 
             if (charIndex % charsToPlay==0)
             {
-                 //AudioSource.Play();
+                 AudioSource.Play();
             }
 
             charIndex++;
