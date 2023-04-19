@@ -104,7 +104,6 @@ public class BattleManager : MonoBehaviour
         }
         else
         {
-            turno++;
             ActualizarTurno();
         }
     }
@@ -210,7 +209,7 @@ public class BattleManager : MonoBehaviour
 
             else if (turno - listaHeroesEnBatalla.Count >= listaEnemigosEnBatalla.Count)
             {
-                turno = 0;
+                turno = -1;
             }
         }
         else if (CheckHeroesConVida() && !CheckEnemigosConVida())

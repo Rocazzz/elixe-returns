@@ -78,6 +78,7 @@ public class Habilidad : MonoBehaviour
         {
             p.TakeDamage(damage);
         }
+        Debug.Log("Se atacó");
     }
 
 

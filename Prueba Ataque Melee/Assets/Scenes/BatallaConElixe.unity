@@ -1584,7 +1584,7 @@ PrefabInstance:
       objectReference: {fileID: 1653233951}
     - target: {fileID: 4179358337200168957, guid: 5917b04b353d15d4b89c0a164bbbb54a, type: 3}
       propertyPath: vida
-      value: 40
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 4349707685712274708, guid: 5917b04b353d15d4b89c0a164bbbb54a, type: 3}
       propertyPath: m_TagString

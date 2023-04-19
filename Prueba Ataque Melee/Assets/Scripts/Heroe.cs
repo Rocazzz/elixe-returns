@@ -1,12 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Heroe : Personaje
 {
     // Start is called before the first frame update
     void Awake()
     {
+        isDead = false;
+        battleManager = FindObjectOfType<BattleManager>();
+        BarraDeVida = GetComponentInChildren<Slider>();
+        BarraDeVida.maxValue = vida;
+        BarraDeVida.value = vida;
+
         foreach (Enemigo enemy in FindObjectsOfType<Enemigo>())
         {
             rivales.Add(enemy);

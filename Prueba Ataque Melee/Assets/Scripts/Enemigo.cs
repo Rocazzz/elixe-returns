@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.iOS;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Enemigo : Personaje
 {
@@ -21,6 +22,12 @@ public class Enemigo : Personaje
     }
     void Awake()
     {
+        isDead = false;
+        battleManager = FindObjectOfType<BattleManager>();
+        BarraDeVida = GetComponentInChildren<Slider>();
+        BarraDeVida.maxValue = vida;
+        BarraDeVida.value = vida;
+
         foreach (Heroe hero in FindFirstObjectByType<PlayersMovement>().GetComponentsInChildren<Heroe>())
         {
             rivales.Add(hero);
